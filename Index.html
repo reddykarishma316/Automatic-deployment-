@@ -1,23 +1,94 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Bus Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+        .map-container {
+            flex: 2;
+            min-width: 400px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: 500px; /* Adjust as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            color: #666;
+        }
+        .bus-list-container {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .bus-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .bus-item:last-child {
+            border-bottom: none;
+        }
+        .bus-name {
+            font-weight: bold;
+        }
+        .bus-status {
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
 <body>
-  <h2>Blood Test Report</h2>
-  <table border="1">
-    <tr>
-      <th>Test Name</th>
-      <th>Result</th>
-      <th>Reference Range</th>
-    </tr>
-    <tr>
-      <td>Hemoglobin</td>
-      <td>14.5</td>
-      <td>13.5-17.5</td>
-    </tr>
-    <tr>
-      <td>WBC Count</td>
-      <td>7000</td>
-      <td>4500-11000</td>
-    </tr>
-  </table>
+    <header>
+        <h1>Live Bus Tracking</h1>
+    </header>
+    <div class="container">
+        <div class="map-container" id="map">
+            <!-- This is where the map (e.g., Google Maps) will be embedded -->
+            Map loading...
+        </div>
+        <div class="bus-list-container">
+            <h2>Available Buses</h2>
+            <div id="bus-list">
+                <!-- Bus information will be dynamically loaded here -->
+                <div class="bus-item">
+                    <div class="bus-name">Bus Route 101</div>
+                    <div class="bus-status">Status: On Time, 5 mins away</div>
+                </div>
+                <div class="bus-item">
+                    <div class="bus-name">Bus Route 202</div>
+                    <div class="bus-status">Status: Delayed, 10 mins away</div>
+                </div>
+                <!-- More bus items can be added dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for map integration and data fetching would go here -->
+    <!-- Example: <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+    <!-- Example: <script src="your_script.js"></script> -->
+  
 </body>
 </html>
-
